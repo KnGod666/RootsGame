@@ -1,7 +1,9 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://resources/autotile_test.bmp" type="Texture" id=1]
 [ext_resource path="res://Scenes/Ruth.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/WorldObject.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Resources/slime.png" type="Texture" id=4]
 
 [sub_resource type="ConvexPolygonShape2D" id=21]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 16, 16, 16, 16, 32, 0, 32 )
@@ -176,3 +178,9 @@ scale = Vector2( 0.132719, 0.153794 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
+
+[node name="Node2D" parent="." instance=ExtResource( 3 )]
+position = Vector2( -226, 57 )
+texture = ExtResource( 4 )
+width = 10
+height = 10

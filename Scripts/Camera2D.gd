@@ -1,5 +1,8 @@
 extends Node2D
 
+onready var sprite = $Sprite
+onready var anim = $Sprite/AnimationPlayer
+onready var popup = $Container/Popup
 var moveVector = Vector2(0,0)
 
 func _ready():
@@ -8,17 +11,33 @@ func _ready():
 func _unhandled_input(event):
 	if(event.is_action_pressed("ui_left")):
 		moveVector.x = -1
+		sprite.flip_h = 1
 	elif(event.is_action_pressed("ui_right")):
 		moveVector.x = 1
+		sprite.flip_h = 0 
 	if(event.is_action_pressed("ui_up")):
 		moveVector.y = -1
 	elif(event.is_action_pressed("ui_down")):
 		moveVector.y = 1
 	
-	if(event.is_action_released("ui_down")||event.is_action_released("ui_up")):
+	anim.play("Walk")
+	
+	if(event.is_action_released("ui_down")&&moveVector.y==1)||(event.is_action_released("ui_up")&&moveVector.y==-1):
 		moveVector.y = 0
-	if(event.is_action_released("ui_left")||event.is_action_released("ui_right")):
+	if(event.is_action_released("ui_left")&&moveVector.x==-1)||(event.is_action_released("ui_right")&&moveVector.x==1):
 		moveVector.x = 0
+	
+	if(moveVector == Vector2.ZERO): anim.play("Still")
 
-func _process(delta):
+func _process(delta): 
 	position += (moveVector*200*delta)
+
+
+func _on_Area2D_area_entered(area):
+	popup.popup()
+	pass # Replace with function body.
+
+
+func _on_Area2D_area_exited(area):
+	popup.hide()
+	pass # Replace with function body.
