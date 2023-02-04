@@ -58,7 +58,6 @@ extents = Vector2( 10, 8.97266 )
 
 [sub_resource type="DynamicFont" id=5]
 size = 70
-outline_color = Color( 0.00784314, 0, 0, 1 )
 font_data = ExtResource( 3 )
 
 [node name="Ruth" type="Node2D"]
