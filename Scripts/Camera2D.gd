@@ -1,4 +1,4 @@
-extends Node2D
+extends KinematicBody2D
 
 
 #pa cambiar de escena
@@ -8,13 +8,13 @@ extends Node2D
 #var puz1 = load("res://Scenes/puzzle1.tscn")
 #var puz = puz1.instance()
 #add_child(puz)  puedes anadirla a cualquier nodo que te de la gana
-
 onready var sprite = $Sprite
 onready var anim = $Sprite/AnimationPlayer
 onready var popup = $Popup
 var moveVector = Vector2(0,0)
+var interactive
 func _ready():
-	pass # Replace with function body.
+	position = get_parent().spawnpoints[WorldFlags.entrance]
 
 func _unhandled_input(event):
 	if(event.is_action_pressed("ui_left")):
@@ -36,13 +36,20 @@ func _unhandled_input(event):
 		moveVector.x = 0
 	
 	if(moveVector == Vector2.ZERO): anim.play("Still")
+	
+	#interaction bit
+	if(event.is_action_released("ui_accept")&&popup.visible):
+		interactive.use()
 
 func _process(delta): 
-	position += (moveVector*200*delta)
+	move_and_collide(moveVector*15)
+	#position += (moveVector*500*delta)
 
 
 func _on_Area2D_area_entered(area):
-	popup.show()
+	if(area.name == "Interactive Area"):
+		popup.show()
+		interactive = area
 	pass # Replace with function body.
 
 

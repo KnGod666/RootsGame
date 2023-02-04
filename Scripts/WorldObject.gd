@@ -8,6 +8,6 @@ onready var colision = $CollisionShape2D
 
 
 func _ready():
-	sprite.texture=texture
+	sprite.texture=ItemsDb.get_item_texture("ID_Card")
 	colision.scale.x = width
 	colision.scale.y = height
