@@ -1,9 +1,9 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scripts/Camera2D.gd" type="Script" id=1]
 [ext_resource path="res://Resources/RUTH TODO.png" type="Texture" id=2]
 [ext_resource path="res://Resources/DejaVuSansMono.ttf" type="DynamicFontData" id=3]
-[ext_resource path="res://Resources/popup.bmp" type="Texture" id=4]
+[ext_resource path="res://Resources/POPUP.png" type="Texture" id=4]
 
 [sub_resource type="Animation" id=2]
 length = 0.001
@@ -54,19 +54,23 @@ tracks/0/keys = {
 "values": [ 6, 12 ]
 }
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 10, 8.97266 )
+[sub_resource type="CapsuleShape2D" id=6]
+radius = 11.3127
+height = 0.0
 
 [sub_resource type="DynamicFont" id=5]
-size = 70
+size = 100
 outline_color = Color( 0.00784314, 0, 0, 1 )
 font_data = ExtResource( 3 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 5.27387, 22.9859 )
 
 [node name="Ruth" type="KinematicBody2D"]
 script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
-scale = Vector2( 1.5504, 0.924292 )
+position = Vector2( -21, 9 )
 texture = ExtResource( 2 )
 hframes = 6
 vframes = 4
@@ -79,29 +83,30 @@ anims/Walk = SubResource( 3 )
 [node name="Area de interaccion" type="Area2D" parent="."]
 
 [node name="Forma de interaccion" type="CollisionShape2D" parent="Area de interaccion"]
-position = Vector2( -30, 73 )
+position = Vector2( -22, 128 )
 scale = Vector2( 38.8942, 44.9589 )
-shape = SubResource( 1 )
+shape = SubResource( 6 )
 
 [node name="Popup" type="Sprite" parent="."]
 visible = false
-position = Vector2( 365, -411 )
-scale = Vector2( 2.71992, 2.8515 )
+position = Vector2( 369, -431 )
+scale = Vector2( 0.89599, 0.661711 )
 texture = ExtResource( 4 )
 
 [node name="Content" type="Label" parent="Popup"]
-margin_left = -21.6918
-margin_top = -50.8503
-margin_right = 20.3082
-margin_bottom = 31.1497
+margin_left = -70.3133
+margin_top = -117.876
+margin_right = -10.3133
+margin_bottom = -0.876282
+rect_scale = Vector2( 2.28972, 2.37381 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 5 )
 text = "E"
 
 [node name="Area de colision" type="CollisionShape2D" parent="."]
-position = Vector2( -24, 398 )
-scale = Vector2( 27.038, 7.28708 )
-shape = SubResource( 1 )
+position = Vector2( -13, 431 )
+scale = Vector2( 31.109, 4.40873 )
+shape = SubResource( 7 )
 
 [connection signal="area_entered" from="Area de interaccion" to="." method="_on_Area2D_area_entered"]
 [connection signal="area_exited" from="Area de interaccion" to="." method="_on_Area2D_area_exited"]

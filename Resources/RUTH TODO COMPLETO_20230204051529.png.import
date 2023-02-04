@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dungueon tiles.png-d17cc4aa8b6043786bb594a4d40e3e9c.stex"
+path="res://.import/RUTH TODO COMPLETO_20230204051529.png-6cead47cdf37aa697fed38dd49df5e54.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/dungueon tiles.png"
-dest_files=[ "res://.import/dungueon tiles.png-d17cc4aa8b6043786bb594a4d40e3e9c.stex" ]
+source_file="res://Resources/RUTH TODO COMPLETO_20230204051529.png"
+dest_files=[ "res://.import/RUTH TODO COMPLETO_20230204051529.png-6cead47cdf37aa697fed38dd49df5e54.stex" ]
 
 [params]
 
@@ -21,7 +21,7 @@ compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=true
-flags/mipmaps=false
+flags/mipmaps=true
 flags/anisotropic=false
 flags/srgb=2
 process/fix_alpha_border=true
