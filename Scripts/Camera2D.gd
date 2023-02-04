@@ -1,10 +1,18 @@
 extends Node2D
 
+
+#pa cambiar de escena
+#get_tree().change_scene("res://Scenes/puzzle1.tscn")
+#
+#pa instanciar
+#var puz1 = load("res://Scenes/puzzle1.tscn")
+#var puz = puz1.instance()
+#add_child(puz)  puedes anadirla a cualquier nodo que te de la gana
+
 onready var sprite = $Sprite
 onready var anim = $Sprite/AnimationPlayer
-onready var popup = $Container/Popup
+onready var popup = $Popup
 var moveVector = Vector2(0,0)
-
 func _ready():
 	pass # Replace with function body.
 
@@ -34,7 +42,7 @@ func _process(delta):
 
 
 func _on_Area2D_area_entered(area):
-	popup.popup()
+	popup.show()
 	pass # Replace with function body.
 
 

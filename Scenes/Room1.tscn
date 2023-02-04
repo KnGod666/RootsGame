@@ -1,9 +1,10 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://resources/autotile_test.bmp" type="Texture" id=1]
 [ext_resource path="res://Scenes/Ruth.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/WorldObject.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Resources/slime.png" type="Texture" id=4]
+[ext_resource path="res://Resources/MUEBLES.png" type="Texture" id=5]
 
 [sub_resource type="ConvexPolygonShape2D" id=21]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 16, 16, 16, 16, 32, 0, 32 )
@@ -177,10 +178,67 @@ position = Vector2( 87, -81 )
 scale = Vector2( 0.132719, 0.153794 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
+scale = Vector2( 0.902236, 0.895758 )
 current = true
 
 [node name="Node2D" parent="." instance=ExtResource( 3 )]
-position = Vector2( -226, 57 )
+position = Vector2( -208, 63 )
 texture = ExtResource( 4 )
 width = 10
 height = 10
+
+[node name="Muebles" type="Sprite" parent="."]
+position = Vector2( -511, 147 )
+scale = Vector2( 0.190921, 0.20145 )
+texture = ExtResource( 5 )
+offset = Vector2( 4721.73, -1395.99 )
+hframes = 4
+vframes = 4
+region_filter_clip = true
+
+[node name="Muebles2" type="Sprite" parent="."]
+position = Vector2( -1313, 138 )
+scale = Vector2( 0.198073, 0.200708 )
+texture = ExtResource( 5 )
+offset = Vector2( 4721.73, -1395.99 )
+hframes = 4
+vframes = 4
+frame = 1
+region_filter_clip = true
+
+[node name="Muebles3" type="Sprite" parent="."]
+position = Vector2( -1247, 185 )
+scale = Vector2( 0.19315, 0.200574 )
+texture = ExtResource( 5 )
+offset = Vector2( 4721.73, -1395.99 )
+hframes = 4
+vframes = 4
+frame = 4
+region_filter_clip = true
+
+[node name="Muebles4" type="Sprite" parent="."]
+position = Vector2( -1372, 429 )
+scale = Vector2( 0.223373, 0.173449 )
+texture = ExtResource( 5 )
+offset = Vector2( 4721.73, -1395.99 )
+region_enabled = true
+region_rect = Rect2( 1579, 69, 952, 468 )
+region_filter_clip = true
+
+[node name="Muebles5" type="Sprite" parent="."]
+position = Vector2( -1374, 381 )
+scale = Vector2( 0.223373, 0.173449 )
+texture = ExtResource( 5 )
+offset = Vector2( 4721.73, -1395.99 )
+region_enabled = true
+region_rect = Rect2( 1469, 609, 619, 520 )
+region_filter_clip = true
+
+[node name="Muebles6" type="Sprite" parent="."]
+position = Vector2( -955, 374 )
+scale = Vector2( 0.223373, 0.173449 )
+texture = ExtResource( 5 )
+offset = Vector2( 4721.73, -1395.99 )
+region_enabled = true
+region_rect = Rect2( 1474, 1827, 1226, 1202 )
+region_filter_clip = true
