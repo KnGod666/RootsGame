@@ -11,6 +11,7 @@ func _ready():
 	var button = get_node("items/ID Card/Interactive Area")
 	button.connect("button_pressed", self, "manage_bridges")
 
+
 func manage_bridges(enable: Array, disable: Array):
 	# enable give us an array of bridges (and conections) indexes
 	# disable too

@@ -29,8 +29,7 @@ config/icon="res://icon.png"
 
 ItemsDb="*res://Handlers/ItemsDB.gd"
 WorldFlags="*res://Handlers/World Flags.gd"
-<<<<<<< HEAD
-=======
+
 TextBoxHandler="*res://Handlers/TextBoxHandler.gd"
 
 [display]
@@ -38,7 +37,6 @@ TextBoxHandler="*res://Handlers/TextBoxHandler.gd"
 window/size/fullscreen=true
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
->>>>>>> main
 
 [gui]
 
