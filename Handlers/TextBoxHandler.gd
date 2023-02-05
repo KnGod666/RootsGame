@@ -4,7 +4,7 @@ var textBox
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	get_node("/root/World").connect("scene_changed",self,"reload_item_box")
+	#get_node("/root/World").connect("scene_changed",self,"reload_item_box")
 	pass
 
 func write_text(text):
