@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Air Tank Leak Slow.mp3-d37a937db4c60e5236420a136b125b1a.mp3str"
+
+[deps]
+
+source_file="res://Resources/Banda Sonora(Jhulian XD)/Sonidos Ambiente/interior/Air Tank Leak Slow.mp3"
+dest_files=[ "res://.import/Air Tank Leak Slow.mp3-d37a937db4c60e5236420a136b125b1a.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

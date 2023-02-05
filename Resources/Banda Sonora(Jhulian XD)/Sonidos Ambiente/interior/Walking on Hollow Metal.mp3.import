@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Walking on Hollow Metal.mp3-067ef6a7ae8883c0cd625face4aa6cfa.mp3str"
+
+[deps]
+
+source_file="res://Resources/Banda Sonora(Jhulian XD)/Sonidos Ambiente/interior/Walking on Hollow Metal.mp3"
+dest_files=[ "res://.import/Walking on Hollow Metal.mp3-067ef6a7ae8883c0cd625face4aa6cfa.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

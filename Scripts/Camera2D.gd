@@ -45,7 +45,7 @@ func _unhandled_input(event):
 		interactive.use()
 
 func _process(delta): 
-	move_and_collide(moveVector*15)
+	move_and_slide(moveVector*1500)
 	#position += (moveVector*500*delta)
 
 
@@ -58,4 +58,6 @@ func _on_Area2D_area_entered(area):
 
 func _on_Area2D_area_exited(area):
 	popup.hide()
-	pass # Replace with function body.
+
+func reselect_camera():
+	$Camera2D.current = true

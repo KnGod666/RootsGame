@@ -20,5 +20,3 @@ func hideBox():
 
 func reload_item_box(scene):
 	textBox = scene.get_node("Ruth/DialogBox")
-	showBox()
-	write_text("Hola, bienvenido a este hermoso mundo\nlolololo\njajajaj")

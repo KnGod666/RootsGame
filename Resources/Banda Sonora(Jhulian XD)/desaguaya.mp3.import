@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/desaguaya.mp3-f2bdf81e3bb02eb34869a07ca9809125.mp3str"
+
+[deps]
+
+source_file="res://Resources/Banda Sonora(Jhulian XD)/desaguaya.mp3"
+dest_files=[ "res://.import/desaguaya.mp3-f2bdf81e3bb02eb34869a07ca9809125.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
