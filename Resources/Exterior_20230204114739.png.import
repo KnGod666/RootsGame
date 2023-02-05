@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/RUTH_20230203113320.png-48cfc47f8da0fc0866136397d79698b5.stex"
+path="res://.import/Exterior_20230204114739.png-7c55fbd58036b2c9a46f8d6a8fb185bf.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/RUTH_20230203113320.png"
-dest_files=[ "res://.import/RUTH_20230203113320.png-48cfc47f8da0fc0866136397d79698b5.stex" ]
+source_file="res://Resources/Exterior_20230204114739.png"
+dest_files=[ "res://.import/Exterior_20230204114739.png-7c55fbd58036b2c9a46f8d6a8fb185bf.stex" ]
 
 [params]
 

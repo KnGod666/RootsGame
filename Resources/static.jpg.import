@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/CAJAS Y TELEVISORES.png-c6328bc0aae0633af51cd40642dde0a5.stex"
+path="res://.import/static.jpg-321c977836eb2b1fdbdc658ec50e0fa5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/CAJAS Y TELEVISORES.png"
-dest_files=[ "res://.import/CAJAS Y TELEVISORES.png-c6328bc0aae0633af51cd40642dde0a5.stex" ]
+source_file="res://Resources/static.jpg"
+dest_files=[ "res://.import/static.jpg-321c977836eb2b1fdbdc658ec50e0fa5.stex" ]
 
 [params]
 
@@ -21,7 +21,7 @@ compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=true
-flags/mipmaps=true
+flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
 process/fix_alpha_border=true

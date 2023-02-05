@@ -11,9 +11,12 @@ extends KinematicBody2D
 onready var sprite = $Sprite
 onready var anim = $Sprite/AnimationPlayer
 onready var popup = $Popup
+onready var dialog = $DialogBox
+
 var moveVector = Vector2(0,0)
+var interactive
 func _ready():
-	pass # Replace with function body.
+	position = get_parent().spawnpoints[WorldFlags.entrance]
 
 func _unhandled_input(event):
 	if(event.is_action_pressed("ui_left")):
@@ -35,6 +38,11 @@ func _unhandled_input(event):
 		moveVector.x = 0
 	
 	if(moveVector == Vector2.ZERO): anim.play("Still")
+	
+	#interaction bit
+	if(event.is_action_released("ui_accept")&&popup.visible):
+		anim.play("pick_up")
+		interactive.use()
 
 func _process(delta): 
 	move_and_collide(moveVector*15)
@@ -42,8 +50,9 @@ func _process(delta):
 
 
 func _on_Area2D_area_entered(area):
-	if(area.name == "interactive_area"):
+	if(area.name == "Interactive Area"):
 		popup.show()
+		interactive = area
 	pass # Replace with function body.
 
 

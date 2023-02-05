@@ -37,4 +37,4 @@ func get_item_texture(item):
 	return items[item].texture
 
 func has_item(item):
-	return true if inventory[item] else false
+	return inventory.has(item)
