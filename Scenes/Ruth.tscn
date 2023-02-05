@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scripts/Camera2D.gd" type="Script" id=1]
-[ext_resource path="res://Resources/RUTH TODO.png" type="Texture" id=2]
+[ext_resource path="res://Resources/RUTH TODO COMPLETO_20230204051529.png" type="Texture" id=2]
 [ext_resource path="res://Resources/DejaVuSansMono.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Resources/POPUP.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/DialogWindow.tscn" type="PackedScene" id=5]
 
 [sub_resource type="Animation" id=2]
 length = 0.001
@@ -54,6 +55,22 @@ tracks/0/keys = {
 "values": [ 6, 12 ]
 }
 
+[sub_resource type="Animation" id=8]
+resource_name = "pick_up"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 21, 0 ]
+}
+
 [sub_resource type="CapsuleShape2D" id=6]
 radius = 11.3127
 height = 0.0
@@ -79,6 +96,7 @@ vframes = 4
 anims/RESET = SubResource( 2 )
 anims/Still = SubResource( 4 )
 anims/Walk = SubResource( 3 )
+anims/pick_up = SubResource( 8 )
 
 [node name="Area de interaccion" type="Area2D" parent="."]
 
@@ -107,6 +125,12 @@ text = "E"
 position = Vector2( -13, 431 )
 scale = Vector2( 31.109, 4.40873 )
 shape = SubResource( 7 )
+
+[node name="DialogBox" parent="." instance=ExtResource( 5 )]
+margin_left = -1461.0
+margin_top = 827.0
+margin_right = 1428.0
+margin_bottom = 1077.0
 
 [connection signal="area_entered" from="Area de interaccion" to="." method="_on_Area2D_area_entered"]
 [connection signal="area_exited" from="Area de interaccion" to="." method="_on_Area2D_area_exited"]

@@ -24,11 +24,12 @@ func _ready():
 		label[i].text = charmap[positions[i]]
 
 func _unhandled_key_input(event):	
-	label6.text = ""
 	if event.is_action_pressed("ui_accept") and actual == answer:
 		label6.text = "OK"
+		pass
 	elif event.is_action_pressed("ui_accept") and actual != answer:
 		label6.text = "BAD"
+		pass
 	
 	if event.is_action_released("ui_up"):
 		positions[pointer] = positions[pointer] + 1
