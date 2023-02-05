@@ -20,10 +20,10 @@ var moveVector = Vector2(0,0)
 var interactive
 func _ready():
 	position = get_parent().spawnpoints[WorldFlags.entrance]
-	dialog.show()
 
 func get_dialog(dialog):
 	dialog_chain = dialog
+	dialog.show()
 	emit_signal("next_dialog", dialog_chain[0])
 
 func _unhandled_input(event):
