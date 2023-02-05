@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Dumpster Door Hit.mp3-15ff21f9e69035c5bbd60b59a19faf90.mp3str"
+
+[deps]
+
+source_file="res://Resources/Banda Sonora(Jhulian XD)/Sonidos Ambiente/interior/Dumpster Door Hit.mp3"
+dest_files=[ "res://.import/Dumpster Door Hit.mp3-15ff21f9e69035c5bbd60b59a19faf90.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -107,8 +107,9 @@ shape = SubResource( 6 )
 
 [node name="Popup" type="Sprite" parent="."]
 visible = false
-position = Vector2( 369, -431 )
-scale = Vector2( 0.89599, 0.661711 )
+position = Vector2( 287.97, -355.602 )
+scale = Vector2( 0.684974, 0.514449 )
+z_index = 2
 texture = ExtResource( 4 )
 
 [node name="Content" type="Label" parent="Popup"]
@@ -127,6 +128,7 @@ scale = Vector2( 31.109, 4.40873 )
 shape = SubResource( 7 )
 
 [node name="DialogBox" parent="." instance=ExtResource( 5 )]
+visible = false
 margin_left = -1461.0
 margin_top = 827.0
 margin_right = 1428.0

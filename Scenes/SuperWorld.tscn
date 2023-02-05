@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scenes/Room1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/SuperWorld.gd" type="Script" id=2]
+[ext_resource path="res://Resources/Banda Sonora(Jhulian XD)/confusion y misterio.mp3" type="AudioStream" id=3]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -61,5 +62,12 @@ anims/fadein = SubResource( 2 )
 anims/fadeout = SubResource( 3 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+autoplay = true
+
+[node name="ViewportCamera" type="Camera2D" parent="."]
+position = Vector2( 512, 301 )
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/persecusion que seguro no se va a usar.mp3-0922f440e2dee4c5b73ed7d9d4470a5f.mp3str"
+
+[deps]
+
+source_file="res://Resources/Banda Sonora(Jhulian XD)/persecusion que seguro no se va a usar.mp3"
+dest_files=[ "res://.import/persecusion que seguro no se va a usar.mp3-0922f440e2dee4c5b73ed7d9d4470a5f.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

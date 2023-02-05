@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Sliding Glass Door Series.mp3-fed24f2570cdd12ebc577e571277fbdd.mp3str"
+
+[deps]
+
+source_file="res://Resources/Banda Sonora(Jhulian XD)/Sonidos Ambiente/Sliding Glass Door Series.mp3"
+dest_files=[ "res://.import/Sliding Glass Door Series.mp3-fed24f2570cdd12ebc577e571277fbdd.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

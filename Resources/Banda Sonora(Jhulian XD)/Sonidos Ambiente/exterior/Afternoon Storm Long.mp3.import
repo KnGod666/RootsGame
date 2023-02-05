@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Afternoon Storm Long.mp3-5b8c16d407f746e279f275257349cc0e.mp3str"
+
+[deps]
+
+source_file="res://Resources/Banda Sonora(Jhulian XD)/Sonidos Ambiente/exterior/Afternoon Storm Long.mp3"
+dest_files=[ "res://.import/Afternoon Storm Long.mp3-5b8c16d407f746e279f275257349cc0e.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

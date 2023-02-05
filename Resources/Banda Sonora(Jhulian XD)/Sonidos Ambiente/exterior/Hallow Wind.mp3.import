@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Hallow Wind.mp3-52d42bf5b1dac29472d548593aadec3a.mp3str"
+
+[deps]
+
+source_file="res://Resources/Banda Sonora(Jhulian XD)/Sonidos Ambiente/exterior/Hallow Wind.mp3"
+dest_files=[ "res://.import/Hallow Wind.mp3-52d42bf5b1dac29472d548593aadec3a.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
