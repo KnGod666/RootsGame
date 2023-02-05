@@ -9,7 +9,7 @@ var connections = [] # [[colision_number, colision_number], ...]
 
 func _ready():
 	var button = get_node("items/ID Card/Interactive Area")
-	button.connect("button_pressed", self, "manage_bridges")
+	#button.connect("button_pressed", self, "manage_bridges")
 
 
 func manage_bridges(enable: Array, disable: Array):
