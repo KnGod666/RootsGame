@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/confusion y misterio.mp3-76dacbb5dee2b5fccbecc5ec7ce8aa68.mp3str"
+
+[deps]
+
+source_file="res://Resources/Banda Sonora(Jhulian XD)/confusion y misterio.mp3"
+dest_files=[ "res://.import/confusion y misterio.mp3-76dacbb5dee2b5fccbecc5ec7ce8aa68.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

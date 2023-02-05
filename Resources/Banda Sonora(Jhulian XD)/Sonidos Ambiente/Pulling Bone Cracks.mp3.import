@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Pulling Bone Cracks.mp3-027545128bf6c9dfe30e931575cee1b1.mp3str"
+
+[deps]
+
+source_file="res://Resources/Banda Sonora(Jhulian XD)/Sonidos Ambiente/Pulling Bone Cracks.mp3"
+dest_files=[ "res://.import/Pulling Bone Cracks.mp3-027545128bf6c9dfe30e931575cee1b1.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/consiguio una bonificaicon.mp3-c9c4ebc38f3974c06f452bbaff0c7f45.mp3str"
+
+[deps]
+
+source_file="res://Resources/Banda Sonora(Jhulian XD)/consiguio una bonificaicon.mp3"
+dest_files=[ "res://.import/consiguio una bonificaicon.mp3-c9c4ebc38f3974c06f452bbaff0c7f45.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

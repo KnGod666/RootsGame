@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/tension loop.mp3-a7db38548561114bbc62e246d214e7ba.mp3str"
+
+[deps]
+
+source_file="res://Resources/Banda Sonora(Jhulian XD)/tension loop.mp3"
+dest_files=[ "res://.import/tension loop.mp3-a7db38548561114bbc62e246d214e7ba.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

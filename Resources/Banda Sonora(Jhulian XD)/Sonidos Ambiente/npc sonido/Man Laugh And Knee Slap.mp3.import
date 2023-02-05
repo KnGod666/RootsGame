@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Man Laugh And Knee Slap.mp3-bc97379a11cbc4cf07eb5e2a25c398db.mp3str"
+
+[deps]
+
+source_file="res://Resources/Banda Sonora(Jhulian XD)/Sonidos Ambiente/npc sonido/Man Laugh And Knee Slap.mp3"
+dest_files=[ "res://.import/Man Laugh And Knee Slap.mp3-bc97379a11cbc4cf07eb5e2a25c398db.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Rain On The Roof.mp3-bcbfd88c38366650eee5a93eef9172e4.mp3str"
+
+[deps]
+
+source_file="res://Resources/Banda Sonora(Jhulian XD)/Sonidos Ambiente/Rain On The Roof.mp3"
+dest_files=[ "res://.import/Rain On The Roof.mp3-bcbfd88c38366650eee5a93eef9172e4.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

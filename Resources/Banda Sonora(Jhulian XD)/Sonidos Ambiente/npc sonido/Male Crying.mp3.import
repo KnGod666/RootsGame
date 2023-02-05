@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Male Crying.mp3-2453582f6cc575b27335c595ad4d3252.mp3str"
+
+[deps]
+
+source_file="res://Resources/Banda Sonora(Jhulian XD)/Sonidos Ambiente/npc sonido/Male Crying.mp3"
+dest_files=[ "res://.import/Male Crying.mp3-2453582f6cc575b27335c595ad4d3252.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
