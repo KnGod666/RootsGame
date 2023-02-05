@@ -817,6 +817,10 @@ position = Vector2( -3917, 2665 )
 show_behind_parent = true
 current = true
 zoom = Vector2( 4, 4 )
+limit_left = -4000
+limit_top = -2850
+limit_right = 3000
+limit_bottom = 4300
 
 [node name="tps" type="Node2D" parent="."]
 

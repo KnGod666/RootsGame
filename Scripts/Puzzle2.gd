@@ -1,5 +1,8 @@
 extends Panel
 
+signal puzzle_canceled
+signal puzzle_complete
+
 onready var label2 = $Panel/Label2
 onready var label3 = $Panel/Label3
 onready var label4 = $Panel/Label4
@@ -23,8 +26,15 @@ func _ready():
 		actual[i] = charmap[positions[i]]
 		label[i].text = charmap[positions[i]]
 
-func _unhandled_key_input(event):	
+func _unhandled_key_input(event):
+	if event.is_action_released("ui_cancel"):
+		emit_signal("puzzle_canceled")
+		return
+	
 	if event.is_action_pressed("ui_accept") and actual == answer:
+		WorldFlags.solvedPuzzles|=(1<<1)
+		emit_signal("puzzle_complete")
+		emit_signal("puzzle_canceled")
 		label6.text = "OK"
 		pass
 	elif event.is_action_pressed("ui_accept") and actual != answer:
@@ -54,7 +64,7 @@ func _unhandled_key_input(event):
 		pointer = pointer % 4
 		assign_colors()
 		pass
-		
+	
 func assign_colors():
 	for i in 4:
 		label[i].add_color_override("font_color", Color(0, 0, 0))

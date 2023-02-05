@@ -14,6 +14,7 @@ onready var anim = $Sprite/AnimationPlayer
 onready var popup = $Popup
 onready var dialog = $DialogBox
 
+
 var dialog_chain = []
 
 var moveVector = Vector2(0,0)
@@ -23,7 +24,8 @@ func _ready():
 
 func get_dialog(dialog):
 	dialog_chain = dialog
-	dialog.show()
+	self.dialog.show()
+	
 	emit_signal("next_dialog", dialog_chain[0])
 
 func _unhandled_input(event):

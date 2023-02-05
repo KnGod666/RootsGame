@@ -18,3 +18,8 @@ func _on_Room3_TP_area_entered(area):
 func _on_Room7_TP_area_entered(area):
 	WorldFlags.entrance = 0
 	emit_signal("change_scene","res://Scenes/Room7.tscn")
+
+
+func _on_Room5_TP_area_entered(area):
+	WorldFlags.entrance = 0
+	emit_signal("change_scene","res://Scenes/Room5.tscn")

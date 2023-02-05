@@ -1,5 +1,7 @@
 extends Node2D
 
+signal change_scene
+
 #buttons
 onready var button1 = $"interruptor/Interactive Area"
 onready var button2 = $"interruptor2/Interactive Area"
@@ -33,7 +35,7 @@ onready var collider11 = $"colliderPuente11"
 onready var collider13 = $"colliderPuente13"
 onready var collider15 = $"colliderPuente15"
 
-const spawnpoints = [Vector2(-583, 4999)]
+const spawnpoints = [Vector2(-1550, 6950)]
 
 var bridges = [] # [Node2D, ...]
 var colliders = [] # [colision, ...]
@@ -78,3 +80,8 @@ func manage_bridges(enable: int):
 		bridges[three_element_max[i]].show()
 		manage_colliders(colliders[three_element_max[i]], true)
 	pass
+
+
+func _on_Room4_TP_area_entered(area):
+	WorldFlags.entrance = 1
+	emit_signal("change_scene","res://Scenes/Room4.tscn")

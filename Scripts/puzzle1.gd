@@ -33,7 +33,7 @@ func evaluate_text():
 	if inputstr == "VIII":
 		inputstr = "OK"
 		label.text = "OK"
-		WorldFlags.solvedPuzzles|=(1<<1)
+		WorldFlags.solvedPuzzles|=(1)
 		emit_signal("puzzle_complete")
 		emit_signal("puzzle_canceled")
 	else:
