@@ -22,12 +22,21 @@ _global_script_class_icons={
 
 config/name="Unnamed Project"
 run/main_scene="res://Scenes/Room1.tscn"
+boot_splash/image="res://Resources/TELEVISOR GIGANTE.png"
 config/icon="res://icon.png"
 
 [autoload]
 
 ItemsDb="*res://Handlers/ItemsDB.gd"
 WorldFlags="*res://Handlers/World Flags.gd"
+
+TextBoxHandler="*res://Handlers/TextBoxHandler.gd"
+
+[display]
+
+window/size/fullscreen=true
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 
 [gui]
 
