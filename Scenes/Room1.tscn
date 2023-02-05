@@ -817,7 +817,6 @@ shape = SubResource( 63 )
 
 [node name="Ruth" parent="." instance=ExtResource( 2 )]
 position = Vector2( -494, -1691 )
-scale = Vector2( 0.635717, 0.854129 )
 
 [node name="Camera2D" type="Camera2D" parent="Ruth"]
 show_behind_parent = true
@@ -826,6 +825,7 @@ scale = Vector2( 1.68677, 0.809471 )
 current = true
 zoom = Vector2( 3.8, 3.8 )
 limit_left = -4020
+smoothing_enabled = true
 
 [node name="Room2 TP" type="Area2D" parent="."]
 position = Vector2( -4251, 2790 )
