@@ -24,6 +24,11 @@ config/name="Unnamed Project"
 run/main_scene="res://Scenes/Room1.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+ItemsDb="*res://Handlers/ItemsDB.gd"
+WorldFlags="*res://Handlers/World Flags.gd"
+
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true

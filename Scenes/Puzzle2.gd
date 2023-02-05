@@ -4,6 +4,7 @@ onready var label2 = $Panel/Label2
 onready var label3 = $Panel/Label3
 onready var label4 = $Panel/Label4
 onready var label5 = $Panel/Label5
+onready var label6 = $Panel/Label6
 
 var label
 var positions = [7, 1, 0, 19, 0]
@@ -21,9 +22,15 @@ func _ready():
 		positions[i] = rng.randf_range(0, 25)
 		actual[i] = charmap[positions[i]]
 		label[i].text = charmap[positions[i]]
-	pass # Replace with function body.
 
 func _unhandled_key_input(event):	
+	if event.is_action_pressed("ui_accept") and actual == answer:
+		label6.text = "OK"
+		pass
+	elif event.is_action_pressed("ui_accept") and actual != answer:
+		label6.text = "BAD"
+		pass
+	
 	if event.is_action_released("ui_up"):
 		positions[pointer] = positions[pointer] + 1
 		var aux = pointer
