@@ -871,6 +871,7 @@ scale = Vector2( 1.68677, 0.809471 )
 current = true
 zoom = Vector2( 3.8, 3.8 )
 limit_left = -4020
+
 limit_bottom = 4300
 editor_draw_limits = true
 
