@@ -626,7 +626,6 @@ tile_data = PoolIntArray( -851982, 38, 9, -851981, 38, 9, -851980, 38, 9, -85197
 
 [node name="Ruth" parent="." instance=ExtResource( 1 )]
 position = Vector2( -288, -315 )
-scale = Vector2( 0.635717, 0.854129 )
 
 [node name="Camera2D" type="Camera2D" parent="Ruth"]
 show_behind_parent = true
