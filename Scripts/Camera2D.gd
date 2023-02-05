@@ -11,6 +11,8 @@ extends KinematicBody2D
 onready var sprite = $Sprite
 onready var anim = $Sprite/AnimationPlayer
 onready var popup = $Popup
+onready var dialog = $DialogBox
+
 var moveVector = Vector2(0,0)
 var interactive
 func _ready():
@@ -39,6 +41,7 @@ func _unhandled_input(event):
 	
 	#interaction bit
 	if(event.is_action_released("ui_accept")&&popup.visible):
+		anim.play("pick_up")
 		interactive.use()
 
 func _process(delta): 
