@@ -37,7 +37,8 @@ func _unhandled_input(event):
 	if(event.is_action_released("ui_left")&&moveVector.x==-1)||(event.is_action_released("ui_right")&&moveVector.x==1):
 		moveVector.x = 0
 	
-	if(moveVector == Vector2.ZERO): anim.play("Still")
+	if(moveVector == Vector2.ZERO):
+		anim.play("RESET")
 	
 	#interaction bit
 	if(event.is_action_released("ui_accept")&&popup.visible):

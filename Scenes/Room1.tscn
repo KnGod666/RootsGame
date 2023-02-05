@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://Resources/THE ROOT.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Ruth.tscn" type="PackedScene" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://Scripts/PuzzlePanel.gd" type="Script" id=14]
 [ext_resource path="res://Resources/puzzle panel.bmp" type="Texture" id=15]
 [ext_resource path="res://Scripts/door2.gd" type="Script" id=16]
+[ext_resource path="res://Resources/Banda Sonora(Jhulian XD)/Sonidos Ambiente/Sliding Glass Door Series.mp3" type="AudioStream" id=17]
 
 [sub_resource type="ConvexPolygonShape2D" id=64]
 points = PoolVector2Array( 0, 0, 285, 0, 285, 285, 0, 285 )
@@ -874,6 +875,9 @@ position = Vector2( -4251, 2790 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tps/Room2 TP"]
 shape = SubResource( 76 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 17 )
 
 [connection signal="area_entered" from="tps/Room3 TP" to="." method="_on_Room3_TP_area_entered"]
 [connection signal="area_entered" from="tps/Room2 TP" to="." method="_on_Room2_TP_area_entered"]

@@ -11,5 +11,11 @@ func _ready():
 
 func open():
 	var tween = get_tree().create_tween()
-	tween.tween_property(self, "position", position+Vector2(0,1200), 1.0).set_trans(Tween.TRANS_SINE)
+	get_parent().get_parent().get_parent().get_node("AudioStreamPlayer").play()
+	tween.tween_property(self, "position", position+Vector2(0,1200), 1.5).set_trans(Tween.TRANS_SINE)
+	tween.connect("finished",self,"door_open")
 	WorldFlags.OpenDoors |= 1
+
+func door_open():
+	get_parent().get_parent().get_parent().get_node("AudioStreamPlayer").stop()
+	
