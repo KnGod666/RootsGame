@@ -1146,6 +1146,10 @@ position = Vector2( -3884, 2790 )
 show_behind_parent = true
 current = true
 zoom = Vector2( 4, 4 )
+limit_left = -4000
+limit_top = -4000
+limit_right = 7750
+limit_bottom = 4850
 
 [node name="TPs" type="Node2D" parent="."]
 
@@ -1162,5 +1166,13 @@ position = Vector2( 1924, 5180 )
 position = Vector2( 5, 5 )
 shape = SubResource( 139 )
 
+[node name="Room5 TP" type="Area2D" parent="TPs"]
+position = Vector2( 1859, -3317 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TPs/Room5 TP"]
+position = Vector2( 5, 5 )
+shape = SubResource( 139 )
+
 [connection signal="area_entered" from="TPs/Room3 TP" to="." method="_on_Room3_TP_area_entered"]
 [connection signal="area_entered" from="TPs/Room7 TP" to="." method="_on_Room7_TP_area_entered"]
+[connection signal="area_entered" from="TPs/Room5 TP" to="." method="_on_Room5_TP_area_entered"]

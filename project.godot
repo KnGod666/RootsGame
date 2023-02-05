@@ -29,7 +29,6 @@ config/icon="res://icon.png"
 
 ItemsDb="*res://Handlers/ItemsDB.gd"
 WorldFlags="*res://Handlers/World Flags.gd"
-TextBoxHandler="*res://Handlers/TextBoxHandler.gd"
 
 [display]
 
