@@ -844,13 +844,8 @@ __meta__ = {
 }
 
 [node name="Interactive Area" type="Area2D" parent="interruptor6"]
-<<<<<<< HEAD
-position = Vector2( -415.633, -150.297 )
-script = ExtResource( 12 )
-=======
 position = Vector2( -429.802, -165.581 )
 script = ExtResource( 6 )
->>>>>>> main
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="interruptor6/Interactive Area"]
 position = Vector2( 453.418, 127.37 )
