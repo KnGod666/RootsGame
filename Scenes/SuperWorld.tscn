@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Scenes/Room1.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Rooms/Room1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/SuperWorld.gd" type="Script" id=2]
 [ext_resource path="res://Resources/Banda Sonora(Jhulian XD)/confusion y misterio.mp3" type="AudioStream" id=3]
 
