@@ -15,7 +15,7 @@ func _ready():
 
 func _on_Room4_TP_area_entered(area):
 	WorldFlags.entrance = 2
-	emit_signal("change_scene","res://Scenes/Room4.tscn")
+	emit_signal("change_scene","res://Scenes/Rooms/Room4.tscn")
 
 
 func _on_Ending_TP_area_entered(area):
