@@ -97,8 +97,8 @@ tracks/0/keys = {
 }
 
 [sub_resource type="CapsuleShape2D" id=6]
-radius = 11.3127
-height = 0.0
+radius = 8.51027
+height = 3.79848
 
 [sub_resource type="DynamicFont" id=5]
 size = 100

@@ -29,6 +29,7 @@ func get_dialog(dialog):
 	emit_signal("next_dialog", dialog_chain[0])
 
 func _unhandled_input(event):
+	#arreglar esto luego
 	if dialog_chain.size() > 0:
 		if event.is_action_released("ui_accept"):
 			dialog_chain.pop_front()
@@ -38,18 +39,20 @@ func _unhandled_input(event):
 			else:
 				dialog.hide()
 		return
-	if(event.is_action_pressed("ui_left")):
-		moveVector.x = -1
-		sprite.flip_h = 1
-	elif(event.is_action_pressed("ui_right")):
-		moveVector.x = 1
-		sprite.flip_h = 0 
-	if(event.is_action_pressed("ui_up")):
-		moveVector.y = -1
-	elif(event.is_action_pressed("ui_down")):
-		moveVector.y = 1
 	
-	anim.play("Walk")
+	if(!WorldFlags.paused):
+		if(event.is_action_pressed("ui_left")):
+			moveVector.x = -1
+			sprite.flip_h = 1
+		elif(event.is_action_pressed("ui_right")):
+			moveVector.x = 1
+			sprite.flip_h = 0 
+		if(event.is_action_pressed("ui_up")):
+			moveVector.y = -1
+		elif(event.is_action_pressed("ui_down")):
+			moveVector.y = 1
+	
+		anim.play("Walk")
 	
 	if(event.is_action_released("ui_down")&&moveVector.y==1)||(event.is_action_released("ui_up")&&moveVector.y==-1):
 		moveVector.y = 0
@@ -60,9 +63,10 @@ func _unhandled_input(event):
 		anim.play("RESET")
 	
 	#interaction bit
-	if(event.is_action_released("ui_accept")&&popup.visible):
-		anim.play("pick_up")
-		interactive.use()
+	if(!WorldFlags.paused):
+		if(event.is_action_released("ui_accept")&&popup.visible):
+			anim.play("pick_up")
+			interactive.use()
 
 func _process(delta): 
 	move_and_slide(moveVector*1500)
