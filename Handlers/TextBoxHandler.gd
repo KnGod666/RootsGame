@@ -1,24 +1,40 @@
 extends Node
 
-var textBox
+signal next_dialog
 
-# Called when the node enters the scene tree for the first time.
+onready var textBox = $TextBoxContainer/DialogBox
+
+var dialog_chain = []
+
 func _ready():
-	get_node("/root/World").connect("scene_changed",self,"reload_item_box")
+	connect("next_dialog",self,"write_text")
 	pass
 
+func _unhandled_input(event):
+	if dialog_chain.size() > 0:
+		if event.is_action_released("ui_accept"):
+			dialog_chain.pop_front()
+			if dialog_chain.size() > 0:
+				emit_signal("next_dialog", dialog_chain[0])
+			else:
+				hideBox()
+		return
 func write_text(text):
-	textBox.get_dialog(text)
+	textBox.writeText(text)
 
-#deprecated
+
 func showBox():
 	textBox.show()
 	WorldFlags.paused = true
 
-#deprecated
+
 func hideBox():
 	textBox.hide()
 	WorldFlags.paused = false
 
-func reload_item_box(scene):
-	textBox = scene.get_node("Ruth")
+
+
+func get_dialog(dialog):
+	dialog_chain = dialog
+	showBox()
+	emit_signal("next_dialog", dialog_chain[0])

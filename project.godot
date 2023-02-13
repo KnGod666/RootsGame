@@ -20,7 +20,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Unnamed Project"
+config/name="Koren"
 run/main_scene="res://Scenes/SuperWorld.tscn"
 boot_splash/image="res://Resources/TELEVISOR GIGANTE.png"
 config/icon="res://icon.png"
@@ -29,6 +29,7 @@ config/icon="res://icon.png"
 
 ItemsDb="*res://Handlers/ItemsDB.gd"
 WorldFlags="*res://Handlers/World Flags.gd"
+Ui="*res://Scenes/UI/UI.tscn"
 
 [display]
 

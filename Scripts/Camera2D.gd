@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-signal next_dialog
+
 
 #pa cambiar de escena
 #get_tree().change_scene("res://Scenes/puzzle1.tscn")
@@ -12,44 +12,29 @@ signal next_dialog
 onready var sprite = $Sprite
 onready var anim = $Sprite/AnimationPlayer
 onready var popup = $Popup
-onready var dialog = $DialogBox
-
-
-var dialog_chain = []
 
 var moveVector = Vector2(0,0)
 var interactive
 func _ready():
 	position = get_parent().spawnpoints[WorldFlags.entrance]
-
-func get_dialog(dialog):
-	dialog_chain = dialog
-	self.dialog.show()
 	
-	emit_signal("next_dialog", dialog_chain[0])
+	$"/root/Ui".get_dialog(["hola","esta es una prueba del dialog box","lololololololo"])
 
 func _unhandled_input(event):
-	if dialog_chain.size() > 0:
-		if event.is_action_released("ui_accept"):
-			dialog_chain.pop_front()
-			if dialog_chain.size() > 0:
-				emit_signal("next_dialog", dialog_chain[0])
-				print(dialog_chain[0].length())
-			else:
-				dialog.hide()
-		return
-	if(event.is_action_pressed("ui_left")):
-		moveVector.x = -1
-		sprite.flip_h = 1
-	elif(event.is_action_pressed("ui_right")):
-		moveVector.x = 1
-		sprite.flip_h = 0 
-	if(event.is_action_pressed("ui_up")):
-		moveVector.y = -1
-	elif(event.is_action_pressed("ui_down")):
-		moveVector.y = 1
 	
-	anim.play("Walk")
+	if(!WorldFlags.paused):
+		if(event.is_action_pressed("ui_left")):
+			moveVector.x = -1
+			sprite.flip_h = 1
+		elif(event.is_action_pressed("ui_right")):
+			moveVector.x = 1
+			sprite.flip_h = 0 
+		if(event.is_action_pressed("ui_up")):
+			moveVector.y = -1
+		elif(event.is_action_pressed("ui_down")):
+			moveVector.y = 1
+	
+		anim.play("Walk")
 	
 	if(event.is_action_released("ui_down")&&moveVector.y==1)||(event.is_action_released("ui_up")&&moveVector.y==-1):
 		moveVector.y = 0
@@ -60,9 +45,10 @@ func _unhandled_input(event):
 		anim.play("RESET")
 	
 	#interaction bit
-	if(event.is_action_released("ui_accept")&&popup.visible):
-		anim.play("pick_up")
-		interactive.use()
+	if(!WorldFlags.paused):
+		if(event.is_action_released("ui_accept")&&popup.visible):
+			anim.play("pick_up")
+			interactive.use()
 
 func _process(delta): 
 	move_and_slide(moveVector*1500)

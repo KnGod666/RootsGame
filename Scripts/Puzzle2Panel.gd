@@ -15,9 +15,11 @@ func _ready():
 func use():
 	get_tree().get_root().add_child(puzz)
 	get_tree().get_root().get_node("World/ViewportCamera").current=true
+	WorldFlags.paused=true
 
 func puzzle_canceled():
 	puzz.get_parent().remove_child(puzz)
+	WorldFlags.paused=false
 	
 func puzzle_complete():
 	monitorable = false

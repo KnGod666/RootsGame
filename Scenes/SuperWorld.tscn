@@ -68,6 +68,7 @@ stream = ExtResource( 3 )
 autoplay = true
 
 [node name="ViewportCamera" type="Camera2D" parent="."]
+visible = false
 position = Vector2( 512, 301 )
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
