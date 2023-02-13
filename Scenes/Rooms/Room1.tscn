@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://Resources/THE ROOT.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Ruth.tscn" type="PackedScene" id=2]
@@ -643,6 +643,38 @@ tracks/0/keys = {
 [sub_resource type="RectangleShape2D" id=45]
 extents = Vector2( 9.91295, 10 )
 
+[sub_resource type="Animation" id=77]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=78]
+resource_name = "static"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+
 [sub_resource type="RectangleShape2D" id=60]
 extents = Vector2( 178, 139.442 )
 
@@ -718,6 +750,8 @@ vframes = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Props/muebles/Muebles6/Static"]
 autoplay = "static"
+anims/RESET = SubResource( 77 )
+anims/static = SubResource( 78 )
 
 [node name="Muebles" type="Sprite" parent="Props/muebles"]
 position = Vector2( -3000, 204 )

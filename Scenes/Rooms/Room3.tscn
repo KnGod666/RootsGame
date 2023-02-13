@@ -646,8 +646,8 @@ extents = Vector2( 284.563, 313.563 )
 extents = Vector2( 324.5, 312.563 )
 
 [sub_resource type="CapsuleShape2D" id=77]
-radius = 479.0
-height = 0.0
+radius = 418.0
+height = 628.0
 
 [sub_resource type="RectangleShape2D" id=81]
 extents = Vector2( 633, 385.75 )
@@ -770,7 +770,8 @@ shape = SubResource( 98 )
 [node name="plantas" type="Node2D" parent="props"]
 
 [node name="ENTERRADOS2" type="Sprite" parent="props/plantas"]
-position = Vector2( 2262, 483 )
+position = Vector2( 2270, 179 )
+z_index = 1
 texture = ExtResource( 5 )
 hframes = 2
 vframes = 2
@@ -779,7 +780,7 @@ frame = 2
 [node name="StaticBody2D" type="StaticBody2D" parent="props/plantas/ENTERRADOS2"]
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="props/plantas/ENTERRADOS2/StaticBody2D"]
-position = Vector2( 135, 645 )
+position = Vector2( 39, 133 )
 shape = SubResource( 77 )
 
 [node name="ENTERRADOS" type="Sprite" parent="props/plantas"]
@@ -791,7 +792,7 @@ vframes = 2
 [node name="StaticBody2D" type="StaticBody2D" parent="props/plantas/ENTERRADOS"]
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="props/plantas/ENTERRADOS/StaticBody2D"]
-position = Vector2( 17, 262 )
+position = Vector2( -15, 54 )
 shape = SubResource( 77 )
 
 [node name="obstaculos" type="Node2D" parent="props"]

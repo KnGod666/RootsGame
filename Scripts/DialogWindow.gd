@@ -1,20 +1,18 @@
 extends Control
 
 onready var textPanel = $TextureRect/MarginContainer/RichTextLabel
-onready var player = $".."
 
-const maxline = 64
+const maxline = 20
 
 func _ready():
-	player.connect("next_dialog", self, "writeText")
+	pass
 
 func writeText(text: String):
 	var full_txt = text
 	if text.length() > maxline:
-		var pos = 64
+		var pos = 20
 		while text[pos] != " " or pos >= 0:
 			pos = pos - 1
-			print(pos)
 		if pos < 0:
 			full_txt[pos] = "\n"
 		else:

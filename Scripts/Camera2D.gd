@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-signal next_dialog
+
 
 #pa cambiar de escena
 #get_tree().change_scene("res://Scenes/puzzle1.tscn")
@@ -12,33 +12,15 @@ signal next_dialog
 onready var sprite = $Sprite
 onready var anim = $Sprite/AnimationPlayer
 onready var popup = $Popup
-onready var dialog = $DialogBox
-
-
-var dialog_chain = []
 
 var moveVector = Vector2(0,0)
 var interactive
 func _ready():
 	position = get_parent().spawnpoints[WorldFlags.entrance]
-
-func get_dialog(dialog):
-	dialog_chain = dialog
-	self.dialog.show()
 	
-	emit_signal("next_dialog", dialog_chain[0])
+	$"/root/Ui".get_dialog(["hola","esta es una prueba del dialog box","lololololololo"])
 
 func _unhandled_input(event):
-	#arreglar esto luego
-	if dialog_chain.size() > 0:
-		if event.is_action_released("ui_accept"):
-			dialog_chain.pop_front()
-			if dialog_chain.size() > 0:
-				emit_signal("next_dialog", dialog_chain[0])
-				print(dialog_chain[0].length())
-			else:
-				dialog.hide()
-		return
 	
 	if(!WorldFlags.paused):
 		if(event.is_action_pressed("ui_left")):
