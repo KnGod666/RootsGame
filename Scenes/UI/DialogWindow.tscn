@@ -57,3 +57,4 @@ virtual_keyboard_enabled = false
 middle_mouse_paste_enabled = false
 selecting_enabled = false
 drag_and_drop_selection_enabled = false
+wrap_enabled = true

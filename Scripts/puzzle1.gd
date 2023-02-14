@@ -3,7 +3,7 @@ extends Panel
 signal puzzle_complete
 signal puzzle_canceled
 
-onready var label = $Panel/Label3/Answer
+onready var label = $MarginContainer/Panel/AspectRatioContainer/HBoxContainer/VBoxContainer3/Answer
 var inputstr = "" setget _set_inputstr
 
 func _ready():

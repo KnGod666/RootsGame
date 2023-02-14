@@ -1,0 +1,190 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Resources/Themes/Greek.tres" type="Theme" id=1]
+[ext_resource path="res://Scripts/puzzle1.gd" type="Script" id=2]
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.156863, 0.117647, 0.117647, 1 )
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.764706, 0.760784, 0.760784, 1 )
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[node name="Panel2" type="Panel"]
+light_mask = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -512.0
+margin_top = -300.0
+margin_right = 512.0
+margin_bottom = 300.0
+custom_styles/panel = SubResource( 4 )
+script = ExtResource( 2 )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 50
+custom_constants/margin_top = 50
+custom_constants/margin_left = 50
+custom_constants/margin_bottom = 50
+
+[node name="Panel" type="Panel" parent="MarginContainer"]
+margin_left = 50.0
+margin_top = 50.0
+margin_right = 974.0
+margin_bottom = 550.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="MarginContainer/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+ratio = 3.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/Panel/AspectRatioContainer"]
+margin_top = 78.5
+margin_right = 924.0
+margin_bottom = 421.5
+custom_constants/separation = 100
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Panel/AspectRatioContainer/HBoxContainer"]
+margin_left = 104.0
+margin_right = 309.0
+margin_bottom = 343.0
+custom_constants/separation = 50
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/Panel/AspectRatioContainer/HBoxContainer/VBoxContainer"]
+margin_right = 205.0
+margin_bottom = 81.0
+grow_horizontal = 2
+rect_min_size = Vector2( 100, 50 )
+size_flags_horizontal = 3
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "IV"
+align = 1
+
+[node name="Label2" type="Label" parent="MarginContainer/Panel/AspectRatioContainer/HBoxContainer/VBoxContainer"]
+margin_top = 131.0
+margin_right = 205.0
+margin_bottom = 212.0
+grow_horizontal = 2
+rect_min_size = Vector2( 100, 50 )
+size_flags_horizontal = 3
+size_flags_vertical = 6
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "IX"
+align = 1
+
+[node name="Label3" type="Label" parent="MarginContainer/Panel/AspectRatioContainer/HBoxContainer/VBoxContainer"]
+margin_top = 262.0
+margin_right = 205.0
+margin_bottom = 343.0
+grow_horizontal = 0
+rect_min_size = Vector2( 100, 50 )
+size_flags_horizontal = 10
+size_flags_vertical = 6
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "LXIV"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/Panel/AspectRatioContainer/HBoxContainer"]
+margin_left = 409.0
+margin_right = 509.0
+margin_bottom = 343.0
+custom_constants/separation = 50
+alignment = 1
+
+[node name="Label4" type="Label" parent="MarginContainer/Panel/AspectRatioContainer/HBoxContainer/VBoxContainer2"]
+margin_right = 100.0
+margin_bottom = 81.0
+grow_horizontal = 2
+rect_min_size = Vector2( 100, 50 )
+size_flags_horizontal = 3
+size_flags_vertical = 6
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "::"
+align = 1
+
+[node name="Label2" type="Label" parent="MarginContainer/Panel/AspectRatioContainer/HBoxContainer/VBoxContainer2"]
+margin_top = 131.0
+margin_right = 100.0
+margin_bottom = 212.0
+grow_horizontal = 2
+rect_min_size = Vector2( 100, 50 )
+size_flags_horizontal = 3
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "::"
+align = 1
+
+[node name="Label3" type="Label" parent="MarginContainer/Panel/AspectRatioContainer/HBoxContainer/VBoxContainer2"]
+margin_top = 262.0
+margin_right = 100.0
+margin_bottom = 343.0
+grow_horizontal = 2
+rect_min_size = Vector2( 100, 50 )
+size_flags_horizontal = 3
+size_flags_vertical = 6
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "::"
+align = 1
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="MarginContainer/Panel/AspectRatioContainer/HBoxContainer"]
+margin_left = 609.0
+margin_right = 819.0
+margin_bottom = 343.0
+custom_constants/separation = 50
+alignment = 1
+
+[node name="Label3" type="Label" parent="MarginContainer/Panel/AspectRatioContainer/HBoxContainer/VBoxContainer3"]
+margin_right = 210.0
+margin_bottom = 81.0
+grow_horizontal = 2
+rect_min_size = Vector2( 100, 50 )
+size_flags_horizontal = 3
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "II"
+align = 1
+
+[node name="Label4" type="Label" parent="MarginContainer/Panel/AspectRatioContainer/HBoxContainer/VBoxContainer3"]
+margin_top = 131.0
+margin_right = 210.0
+margin_bottom = 212.0
+grow_horizontal = 2
+rect_min_size = Vector2( 100, 50 )
+size_flags_horizontal = 3
+size_flags_vertical = 6
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "III"
+align = 1
+
+[node name="Answer" type="Label" parent="MarginContainer/Panel/AspectRatioContainer/HBoxContainer/VBoxContainer3"]
+margin_top = 262.0
+margin_right = 210.0
+margin_bottom = 343.0
+grow_horizontal = 2
+rect_min_size = Vector2( 210, 50 )
+size_flags_horizontal = 5
+size_flags_vertical = 6
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+clip_text = true
+uppercase = true

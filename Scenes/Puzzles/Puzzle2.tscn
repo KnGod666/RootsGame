@@ -1,0 +1,135 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Resources/Themes/Greek.tres" type="Theme" id=1]
+[ext_resource path="res://Scripts/Puzzle2.gd" type="Script" id=2]
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.156863, 0.117647, 0.117647, 1 )
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.764706, 0.760784, 0.760784, 1 )
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[node name="Panel" type="Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -512.0
+margin_top = -300.0
+margin_right = 512.0
+margin_bottom = 300.0
+rect_pivot_offset = Vector2( 510, 368 )
+theme = ExtResource( 1 )
+custom_styles/panel = SubResource( 4 )
+script = ExtResource( 2 )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 50
+custom_constants/margin_top = 50
+custom_constants/margin_left = 50
+custom_constants/margin_bottom = 50
+
+[node name="Panel" type="Panel" parent="MarginContainer"]
+margin_left = 50.0
+margin_top = 50.0
+margin_right = 974.0
+margin_bottom = 550.0
+rect_min_size = Vector2( 500, 500 )
+rect_pivot_offset = Vector2( 331, 319 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="MarginContainer/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Panel/AspectRatioContainer"]
+margin_left = 180.0
+margin_right = 744.0
+margin_bottom = 500.0
+custom_constants/separation = 100
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/Panel/AspectRatioContainer/VBoxContainer"]
+margin_top = 28.0
+margin_right = 564.0
+margin_bottom = 109.0
+grow_horizontal = 2
+rect_min_size = Vector2( 100, 50 )
+size_flags_horizontal = 3
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "WRITE ROOT"
+align = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/Panel/AspectRatioContainer/VBoxContainer"]
+margin_top = 209.0
+margin_right = 564.0
+margin_bottom = 290.0
+
+[node name="Label2" type="Label" parent="MarginContainer/Panel/AspectRatioContainer/VBoxContainer/HBoxContainer"]
+margin_right = 138.0
+margin_bottom = 81.0
+grow_horizontal = 2
+rect_min_size = Vector2( 100, 50 )
+size_flags_horizontal = 3
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "W"
+align = 1
+
+[node name="Label3" type="Label" parent="MarginContainer/Panel/AspectRatioContainer/VBoxContainer/HBoxContainer"]
+margin_left = 142.0
+margin_right = 280.0
+margin_bottom = 81.0
+grow_horizontal = 2
+rect_min_size = Vector2( 100, 50 )
+size_flags_horizontal = 3
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "O"
+align = 1
+
+[node name="Label4" type="Label" parent="MarginContainer/Panel/AspectRatioContainer/VBoxContainer/HBoxContainer"]
+margin_left = 284.0
+margin_right = 422.0
+margin_bottom = 81.0
+grow_horizontal = 2
+rect_min_size = Vector2( 100, 50 )
+size_flags_horizontal = 3
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "R"
+align = 1
+
+[node name="Label5" type="Label" parent="MarginContainer/Panel/AspectRatioContainer/VBoxContainer/HBoxContainer"]
+margin_left = 426.0
+margin_right = 564.0
+margin_bottom = 81.0
+grow_horizontal = 2
+rect_min_size = Vector2( 100, 50 )
+size_flags_horizontal = 3
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "T"
+align = 1
+
+[node name="Label6" type="Label" parent="MarginContainer/Panel/AspectRatioContainer/VBoxContainer"]
+margin_top = 390.0
+margin_right = 564.0
+margin_bottom = 471.0
+grow_horizontal = 2
+rect_min_size = Vector2( 100, 50 )
+size_flags_horizontal = 3
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1

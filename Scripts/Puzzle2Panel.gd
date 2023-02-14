@@ -7,14 +7,12 @@ func _ready():
 		monitorable = false
 		monitoring = false
 		return
-	puzz = load("res://Scenes/puzzle2.tscn").instance()
-	puzz.connect("puzzle_canceled",get_parent().get_parent().get_parent().get_parent().get_node("Ruth"),"reselect_camera")
+	puzz = load("res://Scenes/Puzzles/puzzle2.tscn").instance()
 	puzz.connect("puzzle_complete",self,"puzzle_complete")
 	puzz.connect("puzzle_canceled",self,"puzzle_canceled")
 
 func use():
-	get_tree().get_root().add_child(puzz)
-	get_tree().get_root().get_node("World/ViewportCamera").current=true
+	$"/root/Ui".add_child(puzz)
 	WorldFlags.paused=true
 
 func puzzle_canceled():
