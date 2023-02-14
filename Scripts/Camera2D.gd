@@ -17,8 +17,6 @@ var moveVector = Vector2(0,0)
 var interactive
 func _ready():
 	position = get_parent().spawnpoints[WorldFlags.entrance]
-	
-	$"/root/Ui".get_dialog(["hola","esta es una prueba del dialog box","lololololololo"])
 
 func _unhandled_input(event):
 	

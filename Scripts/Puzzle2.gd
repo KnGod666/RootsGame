@@ -3,11 +3,11 @@ extends Panel
 signal puzzle_canceled
 signal puzzle_complete
 
-onready var label2 = $Panel/Label2
-onready var label3 = $Panel/Label3
-onready var label4 = $Panel/Label4
-onready var label5 = $Panel/Label5
-onready var label6 = $Panel/Label6
+onready var label2 = $MarginContainer/Panel/AspectRatioContainer/VBoxContainer/HBoxContainer/Label2
+onready var label3 = $MarginContainer/Panel/AspectRatioContainer/VBoxContainer/HBoxContainer/Label3
+onready var label4 = $MarginContainer/Panel/AspectRatioContainer/VBoxContainer/HBoxContainer/Label4
+onready var label5 = $MarginContainer/Panel/AspectRatioContainer/VBoxContainer/HBoxContainer/Label5
+onready var label6 = $MarginContainer/Panel/AspectRatioContainer/VBoxContainer/Label6
 
 var label
 var positions = [7, 1, 0, 19, 0]
