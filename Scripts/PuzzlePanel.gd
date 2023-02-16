@@ -7,7 +7,7 @@ func _ready():
 		monitorable = false
 		monitoring = false
 		return
-	puzz = load("res://Scenes/Puzzles/puzzle1.tscn").instance()
+	puzz = load("res://Scenes/Puzzles/Puzzle1.tscn").instance()
 	puzz.connect("puzzle_complete",self,"puzzle_complete")
 	puzz.connect("puzzle_canceled",self,"puzzle_canceled")
 
